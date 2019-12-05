@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="TeloStrane"></div>
+
+<div class="PustenSpot" >
+  <iframe embedded=true [src]='sanitizer.bypassSecurityTrustResourceUrl(pesmaIzabrana)' *ngIf= "pesmaIzabrana !== ''" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="Titl">
+  <h2>{{TitlnadPesmama}}</h2>
+  <div class="Dugme">
+    <button [routerLink]="['/Insert']">Add New Song</button>
+    <button [routerLink]="['/Delete']" class="DurgoDugme">Delete Song</button>
+  </div>
+</div>
+
+<div class="SongsParent" >
+    <div class="SongsChildren" *ngFor="let p of pesme; let i = index"  (click)="onPesmaKliknuta(p)" [ngStyle]="{'background-image': 'url(' + p.slika + ')'}">
+      <i class="fas fa-play"></i>
+    </div>
+</div>
+
+

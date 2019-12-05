@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.Heder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(218, 213, 213, 0.5);
+    height: 10vh;
+    align-content: center;
+    justify-content: center;
+}
+.Dropmenu{
+    display: none;
+}
+.Logo{
+    grid-column: 1/2;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.Logo:hover{
+   cursor: pointer;
+}
+.Logo img{
+   height: 10vh;
+}
+.Logo h2{
+    align-self: center;
+    justify-self: start;
+}
+.Links{
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: flex-end;
+}
+.Links a, .LinksDropmenu a{
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+.Links i{
+    display: none;
+}
+.Links a:hover{
+    cursor: pointer;
+    animation: LinkAnimacija 1s ease-in-out 0s infinite;
+}
+@keyframes LinkAnimacija{
+    0%, 100%{
+        font-size: 16px;
+        color: royalblue;
+    }
+    
+    30%{
+        font-size: 20px;
+        color: red;
+    }
+
+    70%{
+        font-size: 22px;
+        color: yellowgreen;
+    }
+}
+
+@keyframes BurgerAnimacija{
+    0%, 100%{
+        font-size: 30px;
+        color: royalblue;
+    }
+    
+    30%{
+        font-size: 32px;
+        color: red;
+    }
+
+    70%{
+        font-size: 35px;
+        color: yellowgreen;
+    }
+}
+
+@media(max-width: 1024px){
+    .Links a{
+        display: none;
+    }
+
+    .Links i{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        width: 60px;
+        height: 100%;
+        font-size: 30px;
+    }
+
+    .Links i:hover{
+        cursor: pointer;
+        animation: BurgerAnimacija 1s ease-in-out 0s infinite;
+    }
+    @keyframes DropmenuEnter{
+        0%{
+            height: 1vh;
+        }
+        
+        30%, 100%{
+            height: 8vh;
+        }
+    
+        70%{
+            height: 5vh;
+        }
+    }
+    .Dropmenu{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        background: rgba(184, 180, 180, 0.5);
+        height: 8vh;
+    }
+    .Dropmenu .LinksDropmenu a:hover{
+        cursor: pointer;
+        animation: LinkAnimacija 1s ease-in-out 0s infinite;
+    } 
+
+    .klasaDodata{
+        animation: DropmenuEnter 1s ease-in 0s normal;
+    }
+}

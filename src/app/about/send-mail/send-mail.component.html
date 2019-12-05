@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="TeloStrane"></div>
+
+
+
+<form (ngSubmit)= "onLogIn(f)" #f="ngForm">
+
+    <div class="emailTo">
+        <input 
+        type="text"
+        id="email"
+        ngModel
+        name="email"
+        >
+    </div>
+
+    <div class="Text">
+        <input 
+        type="text"
+        id="text"
+        ngModel
+        name="text"
+        placeholder="Enter text to send"
+        >
+    </div>
+
+    <div class="dugmeSend">
+      <button [disabled]="!f.valid">Send</button>
+    </div>
+
+</form>

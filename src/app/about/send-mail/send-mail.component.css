@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.TeloStrane{
+    z-index: -21;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(129, 125, 125);
+}
+
+form{
+    display: grid;
+    grid-template-rows: 50px 150px 50px;
+    justify-self: center;
+    align-self: center;
+}
+.emailTo{
+    grid-row: 1/2;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+.emailTo input{
+    width: 100%;
+    height: 25px;
+    border: none;
+    border-radius: 20px ;
+    text-align: center;
+    
+}
+.Text{
+    grid-row: 2/3;
+    width: 50%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.Text input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    text-align: center;
+}
+.dugmeSend{
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+}
+.dugmeSend button{
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+}
+.dugmeSend button:hover{
+    cursor: pointer;
+    background: rgb(73, 160, 73);
+    color: white;
+    transition: .5s;
+}

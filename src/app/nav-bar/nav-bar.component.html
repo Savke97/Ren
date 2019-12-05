@@ -1,0 +1,21 @@
+<div class="Heder">
+  <div class="Logo" [routerLink]="['/']">
+    <img src="../../assets/Slike/RenLogo.jpg" alt="Logo">
+    <h2>Ren</h2>
+  </div>
+  <div class="Links">
+    <a [routerLink]="['/Insert']">Insert</a>
+    <a [routerLink]="['/Songs']">Songs</a>
+    <a [routerLink]="['/About']">About</a>
+    <a [routerLink]="['/Login']">Login/Register</a>
+    <i class="fas fa-ellipsis-h" (click)="onNavBarBurgerClick()"></i>
+  </div>
+</div>
+<div class="Dropmenu" *ngIf="burgerClik" [ngClass]="{klasaDodata: burgerClik}">
+  <div class="LinksDropmenu">
+    <a [routerLink]="['/Insert']">Insert</a>
+    <a [routerLink]="['/Songs']">Songs</a>
+    <a [routerLink]="['/About']">About</a>
+    <a [routerLink]="['/Login']">Login/Register</a>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="TeloStrane"></div>
+
+
+<form [formGroup]="loginForm">
+    <div class="LoginForm">
+        <div class="Icona">
+                <i class="fas fa-user"></i>
+        </div>
+        <div class="email">
+                <label for="email">Email</label>
+                <input 
+                type="text"
+                id="email"
+                name="email"
+                formControlName="email"
+                >
+        </div>
+
+        <div class="pasword">
+                <label for="password">Pasword</label>
+                <input 
+                type="password"
+                id="password"
+                name="password"
+                formControlName="password"
+                >  
+        </div>
+
+        <div class="submit">
+            <button [disabled]="!loginForm.valid" (click)="onLogIn()">Login</button>
+        </div>
+        <div class="register">
+                <a [routerLink]="['/Register']">Register?</a>
+        </div>
+    </div>
+</form>

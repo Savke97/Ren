@@ -1,0 +1,48 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div class="TeloStrane"></div>
+
+
+<form [formGroup]="songsLinks" class="SongsL"> 
+
+    <div class="linkPesme">
+        <input
+            type="text"
+            id="linkPesme"
+            formControlName="song"
+            placeholder="Input Song Link"
+        >
+    </div>
+
+   
+
+    <div class="imgTumb">
+        <input
+            type="text"
+            id="imgTumb"
+            formControlName="tumb"
+            placeholder="Input Thumbnail Link"
+        >
+    </div>
+    <div class="Tumb">
+        <img [src]="songsLinks.value['tumb']" alt="Link of Thumbnail is invalide, copy the image address not the link address" *ngIf= "songsLinks.value['tumb'] !== ''">
+    </div>
+    
+
+</form>
+
+<div class="Dugme">
+    <button type="submit" (click)="onSubmitClick()" [disabled]="!songsLinks.valid">Submit</button>
+    <button type="button" (click)="onTutorialClick()" [ngClass]="{ifTutorialClic: pokaziTutorial}">{{textNaDugmeZaTutorial}}</button>
+</div>
+
+
+<div class="TextTutoriala" *ngIf="pokaziTutorial"> 
+    <h2>Tutorial on how to insert songs</h2>
+</div>
+
+
+<div class="Tutorial" *ngIf="pokaziTutorial">
+    <iframe src="../../assets/Video/TutotialEmbed.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

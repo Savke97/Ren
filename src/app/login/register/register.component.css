@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.TeloStrane{
+    z-index: -2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../../../assets/Slike/Login-Register.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.regiserForm{
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px 1fr 30px;
+    align-self: center;
+    justify-self: center;
+    
+}
+.email{
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    height: 25px;
+}
+.password{
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    height: 25px;
+}
+.dugme{
+    grid-row: 6/7;
+    align-self: center;
+    justify-self: center;
+}
+.dugme button{
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+}
+.dugme button:hover{
+    cursor: pointer;
+    background: rgb(73, 160, 73);
+    color: white;
+    transition: .5s;
+}
+input{
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red !important;
+}

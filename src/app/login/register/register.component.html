@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="TeloStrane"></div>
+
+<form [formGroup]="registerForm" class="regiserForm">
+  <div class="email">
+    <input
+    type="email" 
+    id="email"
+    placeholder="Email?"
+    name="email"
+    formControlName="email"
+    >
+  </div>
+  <div class="password">
+      <input
+      type="password" 
+      id="password"
+      placeholder="Password?"
+      name="password"
+      formControlName="password"
+      [minlength] ="6"
+      >
+  </div>
+  <div class="dugme">
+    <button [disabled]="!registerForm.valid" type="submit" (click)="onSubUser()">Register</button>
+  </div>
+</form>
