@@ -37,27 +37,13 @@ export class DeletSongsComponent implements OnInit {
               
               }
         );
-    }else{
-      this.http.get('https://ren-musics.firebaseio.com/staticSongs.json')
-      .subscribe(
-              (res: Response) => {
-                const data = res.json();
-                data.forEach((el)=>{
-                        this.pesme.push({
-                          linkPesme: el.linkPesme,
-                          slika: el.slika
-                        })    
-              })
-              
-              }
-        );
     }
     
   }
 
 
   onIzabranaPesmaZaBrisanje(data){
-    if(this.forLogUsers.userJeUlogovan === true){
+    
       this.pesmaIzbranaZaBrisanje = data;
       let novePesme = [];
       Swal.fire({
@@ -91,13 +77,7 @@ export class DeletSongsComponent implements OnInit {
           )
         }
       })
-    }else{
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'You are not logged in to delete songs',
-            })
-    }
+    
     
 
 

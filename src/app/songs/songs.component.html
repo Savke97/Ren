@@ -9,8 +9,8 @@
 <div class="Titl">
   <h2>{{TitlnadPesmama}}</h2>
   <div class="Dugme">
-    <button [routerLink]="['/Insert']">Add New Song</button>
-    <button [routerLink]="['/Delete']" class="DurgoDugme">Delete Song</button>
+    <button [routerLink]="['/Insert']" [disabled]="!logOrNot.userJeUlogovan">Add New Song</button>
+    <button [routerLink]="['/Delete']" [disabled]="!logOrNot.userJeUlogovan" class="DurgoDugme">Delete Song</button>
   </div>
 </div>
 
